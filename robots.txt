@@ -1,0 +1,3 @@
+# Elotitos: todos los buscadores pueden leer la página.
+User-agent: *
+Allow: /

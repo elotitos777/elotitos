@@ -1,0 +1,116 @@
+/* ===== Elotitos · motion.css v2 — animaciones ligeras =====
+   Regla de oro: solo se animan transform y opacity (las pinta la tarjeta gráfica,
+   no el procesador). Nada de filtros, sombras ni degradados animados. */
+:root{--ease:cubic-bezier(.2,.8,.2,1)}
+
+/* ---------- Entrada del hero ---------- */
+.js-motion .hero-copy>*{opacity:0;transform:translateY(28px);animation:rise .9s var(--ease) forwards}
+.js-motion .hero-copy>*:nth-child(1){animation-delay:.05s}
+.js-motion .hero-copy>*:nth-child(2){animation-delay:.18s}
+.js-motion .hero-copy>*:nth-child(3){animation-delay:.34s}
+.js-motion .hero-copy>*:nth-child(4){animation-delay:.48s}
+.js-motion .hero-copy>*:nth-child(5){animation-delay:.62s}
+@keyframes rise{to{opacity:1;transform:none}}
+.js-motion .hero-image-frame{opacity:0;transform:scale(.86);animation:pop 1s var(--ease) .15s forwards}
+@keyframes pop{to{opacity:1;transform:none}}
+
+/* ---------- El elote: cae, rebota y flota ---------- */
+.hero-image-frame .hero-elote{animation:eloteFloat 7s ease-in-out infinite}
+.js-motion .hero-image-frame .hero-elote{animation:eloteIn 1.2s var(--ease) .45s both,eloteFloat 7s ease-in-out 1.7s infinite}
+@keyframes eloteIn{
+  from{opacity:0;transform:translate3d(0,-90px,0) rotate(-10deg) scale(.94)}
+  60%{opacity:1;transform:translate3d(0,10px,0) rotate(1.6deg) scale(1)}
+  to{opacity:1;transform:translate3d(0,0,0) rotate(0) scale(1)}
+}
+@keyframes eloteFloat{
+  0%,100%{transform:translate3d(0,0,0) rotate(0)}
+  50%{transform:translate3d(0,-14px,0) rotate(1.5deg)}
+}
+
+/* ---------- Vapor: está calientito ---------- */
+.steam{position:absolute;top:-4%;width:9%;height:24%;border-radius:50%;opacity:0;
+  background:radial-gradient(closest-side,rgba(255,255,255,.55),rgba(255,255,255,0));
+  animation:steam 5.2s ease-in-out infinite;will-change:transform,opacity}
+.steam.s1{left:37%}
+.steam.s2{left:44%;width:7%;animation-delay:-1.8s}
+.steam.s3{left:30%;width:7%;animation-delay:-3.4s}
+@keyframes steam{
+  0%{opacity:0;transform:translate3d(0,6cqh,0) scale(.7,.8)}
+  30%{opacity:.55}
+  100%{opacity:0;transform:translate3d(-2cqh,-16cqh,0) scale(1.5,1.3)}
+}
+
+/* ---------- Chile y queso cayendo sobre el elote ---------- */
+.sprinkle{position:absolute;top:0;width:1.4%;aspect-ratio:1;border-radius:50%;opacity:0;
+  animation:sprinkle var(--t,4.6s) linear var(--d,0s) infinite;will-change:transform,opacity}
+@keyframes sprinkle{
+  0%{opacity:0;transform:translate3d(0,-4cqh,0) rotate(0)}
+  10%{opacity:1}
+  78%{opacity:.95}
+  100%{opacity:0;transform:translate3d(var(--dx,1.5cqh),80cqh,0) rotate(220deg)}
+}
+
+/* ---------- Destellos ---------- */
+.spark{position:absolute;width:4%;aspect-ratio:1;background:#FFF1C2;opacity:0;
+  clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%);
+  animation:twinkle 3.4s ease-in-out infinite}
+.spark.k1{left:12%;top:24%}
+.spark.k2{left:84%;top:32%;animation-delay:-1.1s;width:3.2%}
+.spark.k3{left:8%;top:68%;animation-delay:-2s;width:3%}
+.spark.k4{left:88%;top:72%;animation-delay:-.6s}
+.spark.k5{left:66%;top:10%;animation-delay:-2.7s;width:3%}
+@keyframes twinkle{0%,100%{opacity:0;transform:scale(.3) rotate(0)}50%{opacity:.95;transform:scale(1) rotate(45deg)}}
+
+/* ---------- Etiquetas flotantes ---------- */
+.floating-note{animation:bob 5s ease-in-out infinite;will-change:translate}
+.note-bottom{animation-delay:-2.5s}
+@keyframes bob{0%,100%{translate:0 0}50%{translate:0 -9px}}
+
+/* "vasito." brilla una sola vez, al cargar */
+.hero h1 em{background:linear-gradient(100deg,var(--corn) 35%,#FFE9A8 50%,var(--corn) 65%);background-size:260% 100%;background-position:120% 0;
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shine 1.8s ease-out 1.5s 1 forwards}
+@keyframes shine{to{background-position:-40% 0}}
+
+/* Cuando el hero no se ve, sus animaciones se pausan (la página sigue fluida al bajar) */
+.hero.is-away *{animation-play-state:paused!important}
+
+/* ---------- Aparecer al hacer scroll ---------- */
+.js-motion [data-reveal]{opacity:0;transform:translateY(34px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--d,0s)}
+.js-motion [data-reveal].in{opacity:1;transform:none}
+.js-motion .product-card[data-reveal]{transform:translateY(46px) scale(.97)}
+.js-motion .product-card[data-reveal].in{transform:none}
+
+/* ---------- Tarjetas de producto ---------- */
+.product-card{transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.product-card:hover{box-shadow:0 28px 50px -20px rgba(0,0,0,.45)}
+.product-image img{transition:transform .6s var(--ease)}
+.product-card:hover .product-image img{transform:translateY(-8px) rotate(-3deg) scale(1.06)}
+.product-image:after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.22) 50%,transparent 65%);transform:translateX(-120%);transition:transform .9s var(--ease);pointer-events:none;z-index:2}
+.product-card:hover .product-image:after{transform:translateX(120%)}
+.product-quick-add{transition:transform .35s var(--ease),background .2s}
+.product-quick-add:hover{transform:rotate(90deg) scale(1.12)}
+
+/* ---------- Botones ---------- */
+.button-primary,.cart-trigger{position:relative;overflow:hidden;transition:transform .3s var(--ease),box-shadow .3s,background .2s}
+.button-primary:after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 40%,rgba(255,255,255,.45) 50%,transparent 60%);transform:translateX(-130%)}
+.button-primary:hover:after{transform:translateX(130%);transition:transform .8s var(--ease)}
+.button-primary:hover{box-shadow:0 10px 30px -8px rgba(242,176,30,.65)}
+.button-primary:active{transform:scale(.96)}
+.cart-trigger.bump{animation:bump .5s var(--ease)}
+@keyframes bump{30%{transform:scale(1.14)}60%{transform:scale(.97)}}
+
+/* ---------- Cinta y barra de progreso ---------- */
+.ticker-track{animation-duration:28s}
+.scroll-progress{position:fixed;top:0;left:0;height:3px;width:100%;background:linear-gradient(90deg,var(--chili),var(--corn));transform-origin:0 50%;transform:scaleX(0);z-index:200;pointer-events:none;will-change:transform}
+.site-header{transition:box-shadow .3s}
+.site-header.scrolled{box-shadow:0 10px 30px -14px rgba(0,0,0,.7)}
+
+/* ---------- Accesibilidad: movimiento reducido ---------- */
+@media(prefers-reduced-motion:reduce){
+  .js-motion .hero-copy>*,.js-motion .hero-image-frame,.js-motion [data-reveal]{opacity:1!important;transform:none!important;animation:none!important;transition:none!important}
+  .hero-image-frame .hero-elote,.floating-note,.hero h1 em{animation:none!important}
+  .hero-fx,.scroll-progress{display:none}
+}
+.reduced-motion .hero-copy>*,.reduced-motion .hero-image-frame,.reduced-motion .hero-image-frame .hero-elote,.reduced-motion .floating-note,.reduced-motion .hero h1 em,.reduced-motion [data-reveal]{animation:none!important;opacity:1!important;transform:none!important}
+.reduced-motion .hero h1 em{background-position:-40% 0}
+.reduced-motion .hero-fx,.reduced-motion .scroll-progress{display:none}

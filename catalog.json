@@ -1,0 +1,127 @@
+{
+  "version": 2,
+  "updatedAt": "",
+  "adminHash": "c7f6069b2e0d40f9e393cad7f834e926eb22dfa95c6210058e3cf6d09d054171",
+  "business": {
+    "name": "Elotitos",
+    "whatsapp": "522213698374",
+    "location": "",
+    "mapsUrl": "",
+    "siteUrl": "",
+    "hours": "",
+    "schedule": null,
+    "pickup": true,
+    "delivery": {
+      "enabled": false,
+      "fee": 0,
+      "note": ""
+    },
+    "payments": [
+      "Efectivo"
+    ],
+    "transfer": {
+      "bank": "",
+      "holder": "",
+      "account": "",
+      "concept": "Pedido Elotitos"
+    },
+    "ordersPaused": false,
+    "pauseMessage": "",
+    "blockWhenClosed": false,
+    "socials": {
+      "instagram": "",
+      "tiktok": "",
+      "facebook": ""
+    },
+    "legal": {
+      "name": "",
+      "address": "",
+      "email": ""
+    }
+  },
+  "testimonials": [],
+  "products": [
+    {
+      "id": "elote",
+      "name": "Elote preparado",
+      "price": 30,
+      "category": "elotes",
+      "tag": "El favorito",
+      "available": true,
+      "spicy": true,
+      "description": "Maíz tierno, mayonesa, queso, limoncito y el chile que tú elijas.",
+      "ingredients": [
+        "Mayonesa",
+        "Queso",
+        "Limón",
+        "Sal"
+      ],
+      "image": "assets/elote-card.webp",
+      "extras": []
+    },
+    {
+      "id": "esquites",
+      "name": "Esquites normal",
+      "price": 30,
+      "category": "esquites",
+      "tag": "Calientitos",
+      "available": true,
+      "spicy": true,
+      "description": "Granos dulces y calientitos con todos sus acompañantes favoritos.",
+      "ingredients": [
+        "Mayonesa",
+        "Queso",
+        "Limón",
+        "Crema",
+        "Sal"
+      ],
+      "image": "assets/esquites-card.webp",
+      "extras": []
+    },
+    {
+      "id": "esquites-grande",
+      "name": "Esquites grande",
+      "price": 60,
+      "category": "esquites",
+      "tag": "Vaso grande",
+      "available": true,
+      "spicy": true,
+      "description": "El mismo sabor en vaso grande, para cuando el antojo es de los grandes.",
+      "ingredients": [
+        "Mayonesa",
+        "Queso",
+        "Limón",
+        "Crema",
+        "Sal"
+      ],
+      "image": "assets/esquites-card.webp",
+      "extras": []
+    }
+  ],
+  "gallery": [
+    {
+      "src": "assets/gal-elote.svg",
+      "alt": "Elote preparado con mayonesa, queso y chile en polvo"
+    },
+    {
+      "src": "assets/gal-esquites.svg",
+      "alt": "Vasito de esquites con queso, crema y limón"
+    },
+    {
+      "src": "assets/gal-limon.svg",
+      "alt": "Limones frescos"
+    },
+    {
+      "src": "assets/gal-chile.svg",
+      "alt": "Chiles rojos"
+    },
+    {
+      "src": "assets/gal-queso.svg",
+      "alt": "Queso"
+    },
+    {
+      "src": "assets/gal-maiz.svg",
+      "alt": "Mazorca de maíz tierno"
+    }
+  ]
+}

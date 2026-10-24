@@ -1,0 +1,52 @@
+# =====================================================================================
+# Encabezados de seguridad y de caché para NETLIFY y CLOUDFLARE PAGES (los toman solos).
+# GitHub Pages no permite encabezados propios; por eso cada página ya trae su política de
+# seguridad (Content-Security-Policy) en una etiqueta <meta>. Si usas GitHub Pages, ignora este archivo.
+# Nota: la caché larga solo se aplica a archivos que nunca cambian de contenido (letras y fotos subidas).
+# =====================================================================================
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+
+# Lo que cambia cuando publicas: siempre se revisa si hay una versión nueva
+/
+  Cache-Control: no-cache
+/index.html
+  Cache-Control: no-cache
+/privacidad.html
+  Cache-Control: no-cache
+/terminos.html
+  Cache-Control: no-cache
+/catalog.json
+  Cache-Control: no-cache
+/sw.js
+  Cache-Control: no-cache
+/app.js
+  Cache-Control: no-cache
+/admin.js
+  Cache-Control: no-cache
+/publish.js
+  Cache-Control: no-cache
+/poster.js
+  Cache-Control: no-cache
+/legal.js
+  Cache-Control: no-cache
+/motion.js
+  Cache-Control: no-cache
+/styles.css
+  Cache-Control: no-cache
+/legal.css
+  Cache-Control: no-cache
+/motion.css
+  Cache-Control: no-cache
+/manifest.webmanifest
+  Cache-Control: no-cache
+
+# Lo que nunca cambia (el nombre de la foto es su "huella"): se guarda un año
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+/assets/u/*
+  Cache-Control: public, max-age=31536000, immutable
