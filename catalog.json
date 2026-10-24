@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "updatedAt": "",
-  "adminHash": "c7f6069b2e0d40f9e393cad7f834e926eb22dfa95c6210058e3cf6d09d054171",
+  "updatedAt": "2026-10-24T22:54:14.606Z",
+  "adminHash": "48aab11bfec14093df757392f021837e57fb801454c0ba8cbe00d4a63e650bcf",
   "business": {
     "name": "Elotitos",
     "whatsapp": "522213698374",
@@ -9,7 +9,33 @@
     "mapsUrl": "",
     "siteUrl": "",
     "hours": "",
-    "schedule": null,
+    "schedule": {
+      "0": null,
+      "1": [
+        "18:00",
+        "22:00"
+      ],
+      "2": [
+        "18:00",
+        "22:00"
+      ],
+      "3": [
+        "18:00",
+        "22:00"
+      ],
+      "4": [
+        "18:00",
+        "22:00"
+      ],
+      "5": [
+        "18:00",
+        "22:00"
+      ],
+      "6": [
+        "18:00",
+        "22:00"
+      ]
+    },
     "pickup": true,
     "delivery": {
       "enabled": false,
@@ -27,24 +53,23 @@
     },
     "ordersPaused": false,
     "pauseMessage": "",
-    "blockWhenClosed": false,
+    "blockWhenClosed": true,
     "socials": {
       "instagram": "",
       "tiktok": "",
       "facebook": ""
     },
     "legal": {
-      "name": "",
+      "name": "JOUSSETH DAFARIDT LEZAMA SALDIERNA",
       "address": "",
       "email": ""
     }
   },
-  "testimonials": [],
   "products": [
     {
       "id": "elote",
       "name": "Elote preparado",
-      "price": 30,
+      "price": 29.99,
       "category": "elotes",
       "tag": "El favorito",
       "available": true,
@@ -56,8 +81,8 @@
         "Limón",
         "Sal"
       ],
-      "image": "assets/elote-card.webp",
-      "extras": []
+      "extras": [],
+      "image": "assets/elote-card.webp"
     },
     {
       "id": "esquites",
@@ -75,8 +100,8 @@
         "Crema",
         "Sal"
       ],
-      "image": "assets/esquites-card.webp",
-      "extras": []
+      "extras": [],
+      "image": "assets/esquites-card.webp"
     },
     {
       "id": "esquites-grande",
@@ -94,8 +119,21 @@
         "Crema",
         "Sal"
       ],
-      "image": "assets/esquites-card.webp",
-      "extras": []
+      "extras": [],
+      "image": "assets/esquites-card.webp"
+    },
+    {
+      "id": "nuevo-mvmzx333",
+      "name": "Producto nuevo",
+      "price": 30,
+      "category": "otros",
+      "tag": "",
+      "available": true,
+      "spicy": false,
+      "description": "Describe tu producto aquí.",
+      "ingredients": [],
+      "extras": [],
+      "image": ""
     }
   ],
   "gallery": [
@@ -123,5 +161,6 @@
       "src": "assets/gal-maiz.svg",
       "alt": "Mazorca de maíz tierno"
     }
-  ]
+  ],
+  "testimonials": []
 }
