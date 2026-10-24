@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "updatedAt": "2026-10-24T23:10:06.683Z",
+  "updatedAt": "2026-10-24T23:26:06.461Z",
   "adminHash": "48aab11bfec14093df757392f021837e57fb801454c0ba8cbe00d4a63e650bcf",
   "business": {
     "name": "Elotitos",
     "whatsapp": "522213698374",
-    "location": "",
-    "mapsUrl": "",
+    "location": "ELOTITOS, Calle 103 Ote 5905 granjas de san isidro 72587 heroica puebla de zaragoza pue.",
+    "mapsUrl": "https://maps.app.goo.gl/Vuiy17vJyomwk9LG8?g_st=aw",
     "siteUrl": "https://elotitos777.github.io/elotitos/",
-    "hours": "",
+    "hours": "Lunes a Sabado de 5:00 p.m. - 10:00 p.m.",
     "schedule": {
       "0": null,
       "1": [
@@ -61,7 +61,7 @@
     },
     "legal": {
       "name": "JOUSSETH DAFARIDT LEZAMA SALDIERNA",
-      "address": "",
+      "address": "ELOTITOS, Calle 103 Ote 5905 granjas de san isidro 72587 heroica puebla de zaragoza pue.",
       "email": "elotitos.2026@gmail.com"
     }
   },
