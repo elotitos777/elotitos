@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "updatedAt": "2026-10-24T22:54:16.833Z",
+  "updatedAt": "2026-10-24T23:10:06.683Z",
   "adminHash": "48aab11bfec14093df757392f021837e57fb801454c0ba8cbe00d4a63e650bcf",
   "business": {
     "name": "Elotitos",
     "whatsapp": "522213698374",
     "location": "",
     "mapsUrl": "",
-    "siteUrl": "",
+    "siteUrl": "https://elotitos777.github.io/elotitos/",
     "hours": "",
     "schedule": {
       "0": null,
@@ -38,9 +38,9 @@
     },
     "pickup": true,
     "delivery": {
-      "enabled": false,
+      "enabled": true,
       "fee": 0,
-      "note": ""
+      "note": "Entregamos solo al rededor de la colonia granjas de san isidro y en compras mayores a 100 pesos Mexicanos."
     },
     "payments": [
       "Efectivo"
@@ -62,7 +62,7 @@
     "legal": {
       "name": "JOUSSETH DAFARIDT LEZAMA SALDIERNA",
       "address": "",
-      "email": ""
+      "email": "elotitos.2026@gmail.com"
     }
   },
   "products": [
@@ -136,31 +136,6 @@
       "image": ""
     }
   ],
-  "gallery": [
-    {
-      "src": "assets/gal-elote.svg",
-      "alt": "Elote preparado con mayonesa, queso y chile en polvo"
-    },
-    {
-      "src": "assets/gal-esquites.svg",
-      "alt": "Vasito de esquites con queso, crema y limón"
-    },
-    {
-      "src": "assets/gal-limon.svg",
-      "alt": "Limones frescos"
-    },
-    {
-      "src": "assets/gal-chile.svg",
-      "alt": "Chiles rojos"
-    },
-    {
-      "src": "assets/gal-queso.svg",
-      "alt": "Queso"
-    },
-    {
-      "src": "assets/gal-maiz.svg",
-      "alt": "Mazorca de maíz tierno"
-    }
-  ],
+  "gallery": [],
   "testimonials": []
 }
